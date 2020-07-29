@@ -12,7 +12,8 @@ node{
     
     stage("Run") {
         img.withRun("--name run-$BUILD_ID -p 4000:4000"){
-        sh 'ps'
+        sh 'docker ps'
+        sh 'curl  localhost:5000
         }
     }
 }
